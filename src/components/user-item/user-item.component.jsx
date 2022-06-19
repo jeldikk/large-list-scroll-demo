@@ -28,7 +28,7 @@ function UserItem({ user, style }) {
     country,
     avatarUrl,
   } = user;
-  //   console.log("user item");
+
   return (
     <div style={style} className="user-item">
       <div className="avatar">

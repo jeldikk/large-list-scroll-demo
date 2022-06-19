@@ -31,7 +31,7 @@ const ageGroups = [
 function ButtonFilters({ setGender, setAgeGroup }) {
   const genders = useSelector(selectGenders);
   const userGridContext = useContext(UserGridContext);
-  console.log({ genders, userGridContext });
+
   return (
     <div className="button-filters">
       <button

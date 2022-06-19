@@ -7,9 +7,6 @@ import { useCallback, useEffect } from "react";
 function UserList({ users }) {
   const itemCallback = useCallback(
     ({ index, style }) => {
-      // console.log("called from itemCallback");
-      // const GUTTER = 10;
-      // console.log({ style });
       const alteredStyle = {
         ...style,
       };

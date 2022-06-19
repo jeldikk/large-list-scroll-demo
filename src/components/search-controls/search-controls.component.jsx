@@ -8,8 +8,6 @@ function SearchControl() {
   const userGridContext = useContext(UserGridContext);
 
   const setTextDebounced = debounce((value) => {
-    console.log("I will be called after some time");
-    console.log({ userGridContext });
     userGridContext.setSearchTextValue(value);
   }, 500);
 

@@ -14,20 +14,16 @@ import UserList from "../../components/user-list/user-list.component";
 import { selectUsers } from "../../redux/users/users.selector";
 
 function filterUsersByGender(values, gender) {
-  console.log("filterUsersByGender");
   return gender === null ? values : values.filter((v) => v.gender === gender);
 }
 
 function filterByAgeGroup(values, age) {
-  console.log("filterByAgeGroup");
-  console.log({ values, ...age });
   return age === null
     ? values
     : values.filter((v) => v.age >= age.min && v.age < age.max);
 }
 
 function sortUsersByField(values, field, order) {
-  console.log("sortUsersByField");
   return Array.from(values).sort((a, b) => {
     const lval = a[field];
     const rval = b[field];
@@ -82,10 +78,6 @@ function UsersPage() {
     fetchUsers();
   }, []);
 
-  useEffect(() => {
-    console.log("usersList from select is updated ");
-  }, [usersList]);
-
   let filteredUsers = useMemo(
     () => filterUsersByGender(usersList, gender),
     [usersList, gender]
@@ -105,8 +97,6 @@ function UsersPage() {
     () => searchByTextandFields(filteredUsers, searchText, searchFields),
     [filteredUsers, searchText, searchFields]
   );
-
-  console.log({ filteredUsers });
 
   return (
     <div className="userspage">
