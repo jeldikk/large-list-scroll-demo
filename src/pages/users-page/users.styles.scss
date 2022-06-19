@@ -1,0 +1,17 @@
+.userspage{
+    padding: 0.5rem;
+    
+    .card{
+        .card-header{
+            .filters-sorters{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .button-controls{
+                    display: flex;
+                }
+            }
+        }
+    }
+}

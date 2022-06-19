@@ -1,0 +1,46 @@
+.user-item{
+    padding: 0rem 2rem;
+    // border: 1px solid steelblue;
+    margin-bottom: 1rem;
+    
+    display: flex;
+    justify-content: start;
+
+    .avatar{
+
+    }
+
+    .content{
+        flex-grow: 1;
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        justify-content: space-between;
+
+        .details{
+            .name{
+                font-weight: bold;
+            }
+            
+        }
+    
+        .flags-controls{
+            .controls{
+                button{
+                    margin-left: 5px;
+                    padding: 2px 5px;
+                }
+            }
+            .flags{
+                span{
+                    margin-right: 0.25rem;
+                }
+            }
+        }
+    }
+
+    &:hover{
+        cursor: pointer;
+        background-color: rgba(steelblue, 0.3);
+    }
+    
+}
